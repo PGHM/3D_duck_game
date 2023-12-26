@@ -4,11 +4,11 @@ As part of a graphics basics course I had to do a project assigment. I chose
 to do a 3D game. The aim of the game is pretty simple, you have to collect
 ducks and avoid bombs that a skull shoots at you.
 
-I have never done anything like this before this assignment or after this
-assignment and the end result still makes me laugh. It was so much fun to make
-this and use trigonometry to create something "real". The worst part was
-finding free to use object models that Processing would support. And the fact
-I had to use Java to code this.
+I have never done anything like this before or after this assignment and the 
+end result still makes me laugh. It was so much fun to make this and use 
+trigonometry to create something "real". The worst part was finding free to 
+use object models that Processing would support. And the fact I had to use 
+Java to code this.
 
 There must have been some kind of restriction in Processing that you can use
 only a single file, I cannot fathom why else I would have used just a single
@@ -39,6 +39,6 @@ All the other required dependencies should be in the repository.
 
 ## Compiled binary
 
-There is a [compiled binary](\game_executable_binary_windows_x64.zip) that you
+There is a [compiled binary](/game_executable_binary_windows_x64.zip) that you
 can run in Windows 7/10/11 systems with 64-bit architecture. It uses the
 updated models and no longer has the tree object that was lost in time.
