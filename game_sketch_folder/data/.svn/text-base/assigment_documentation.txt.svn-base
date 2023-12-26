@@ -1,0 +1,95 @@
+Description of the assignment:
+------------------------------
+
+I chose alternative one, so I created a 3D world. First I had idea of four
+different rooms with different textures and different feels. That's where I
+started and fetched different textures from internet and designed rooms that
+were made from small tiles that were textured. This made possible to make
+doors to the walls so I could walk from room to room.
+
+Then I had to make the character move. I took the implementation greatly from
+the labyrinth assignment and it helped a lot. I added possibility to jump with
+space, it simply changes the y coordinate of the camera up and down. Character
+can't walk through the walls and is stopped if he tries to do so. The walls
+are simple 2d rectangles and at every frame all of them are checked so the
+player coordinates are not inside them. The walls are initialized so that they
+are in sync with the textured tiles.
+
+I didn't focus much on the objects in the environment, there is one tree that
+is the only object I could find textured, it was pretty hard to find free
+objects with textures that worked in the processing environment. The tree is
+just loaded there and translated in the right position. What is more
+interesting are the floating objects. The point of this game is to collect
+floating rubber ducks by jumping on them, they make a sound if you succeed and
+then a new duck appears. The floating objects are simply translated to their
+position and can be rotated at will.
+
+Things can't be too easy, so there is a floating Skull which is a floating
+object with a little extra twist. It checks if the player is on the predefined
+range and if it is, it tries to turn itself to face the player. If the player
+is in front of the skull, it fires a Bomb, which is another floating object
+that has the ability to explode when it hits Wall object or the player. If it
+hits the wall it makes an Explosion, which is just a red sphere that grows
+until it disappears. If the bomb hits the player, he dies. The skull patrols
+through the rooms and if player goes out of range it just turns to previous
+direction and continues patrolling.
+
+When a player dies, he falls to the floor with nice twist and the lights go
+red indicating that he dies (duh). The game ends there and there is death
+screen which is basically just 2D screen with text (the 3D world stops
+rendering). If the player collects all the ducks, he wins and a similar 2D
+screen appears with a victory text.
+
+There is also sound effects on the bombs, some music and victory duck quaks.
+If you don't want to hear any sounds, there is a variable "SOUNDS" in the
+beginning which you can set false. Also if you don't want the skull to annoy
+you there is possibility to turn that off too.
+
+I used saitoOBJloader for loading the objects and Minim sound library to play
+the sounds and music.
+
+Things that affect grading:
+---------------------------
+
+Geometric modeling:
+
+- Quality of geometric models
+    * 1p, I used complex objects but I didn't make them myself
+
+- Complexity of the world
+    * 1p, the world is complex with four different rooms with doors and moving
+      objects in it.
+
+- Animation of the models
+    * 2p, I have simple animation where things move forward with certain speed
+      and planned trajectory to the Skull object.
+
+Texturing and lighting:
+
+- Lighting
+    * 1p, simple lighting which changes during death event
+
+- Texturing
+    * 1p, premade textures (lots of them)
+
+Interaction:
+
+- Navigation
+    * 2p, the character can't get through walls, can jump, can look around but
+      is limited in the xz-space excluding the jump
+
+Interaction with the world
+    * 2p, interaction with the ducks, avoiding the bombs the skull shoots,
+      running away from the skull. I know I can't click on things with mouse
+      or manipulate them but the artificial intelligence and challenge the
+      skull creates is interaction of different kind.
+
+- Interaction between objects
+    * 1p, player and the duck, player and the bomb, player and the skull react
+      to each other according to the distance between them. If bomb hits
+      player, player dies. If player collects all the ducks, he wins the game.
+
+- Extra
+    * Added music and sound effects to the game, it wasn't required but I got
+      pretty excited about the game once the boring wall rendering and
+      navigation was done, it was pretty awesome to do this after that.

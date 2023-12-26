@@ -1,0 +1,13 @@
+# Blender MTL File: 'baobab_tree16.blend'
+# Material Count: 1
+newmtl tree_mat_diffuse_map3
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.181267 0.157553 0.112566
+Ks 0.261889 0.244605 0.192754
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd diffuse_map3.jpg
+
+
